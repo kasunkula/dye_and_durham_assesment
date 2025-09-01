@@ -1,0 +1,18 @@
+os: Ubuntu2204
+
+environment:
+  JDK_VERSION: openjdk17
+
+install:
+  - java -version
+  - mvn -v
+
+build_script:
+  - mvn package
+
+test_script:
+  - mvn test
+
+artifacts:
+  - path: target\*.jar
+    name: name-sorter
